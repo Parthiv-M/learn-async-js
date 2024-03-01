@@ -1,1 +1,6 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+The two calls to sum2DArray() synchronously, one after the other. This initiates the promise in both cases.
+Once the method calls are completed, it goes into the respective .then() callback functions where the result
+is displayed, if any. If an error is thrown from the Promise, then it is handled in the .catch() of each respective
+method. The result is returned after the promises are resolved and no result is returned if the promise is rejected.
